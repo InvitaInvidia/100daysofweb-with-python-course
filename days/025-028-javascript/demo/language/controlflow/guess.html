@@ -23,6 +23,39 @@
   const secretNumber = getRandomInt(1, 15);
 
   // you code
+        let attempt = 0
+      while(attempt<= 5){
+        let guess = prompt("Guess my number:")
+          attempt += 1;
+        if (guess === null || guess === 'q'){
+            break;
+            }
+        else{
+            let guess_parsed = parseInt(guess)
+                if (isNaN(guess_parsed)){
+                    continue;
+                }
+                else{
+                    if(guess_parsed === secretNumber){
+                        console.log('You guessed it!');
+                        break;
+                    }
+                    else{
+                        if(attempt=== 5) {
+                            console.log("You failed!");
+                            break;
+                        }
+                        else if (guess_parsed < secretNumber) {
+                            console.log("Too low!");
+                        }
+                        else{
+                            console.log("Too high!")
+                        }
+                    }
+                }
+
+        }
+      }
 
   </script>
 </body>

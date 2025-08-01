@@ -24,7 +24,18 @@
   const ages = [14, 33, 17, 18, 25, 7];
 
   // you code
-
+  let i = 0
+  while (i < 6){
+      let name_i = names[i]
+      let age_i = ages[i]
+      if(age_i >17){
+          console.log(`${name_i} is allowed to drive`)
+      }
+      else{
+          console.log(`${name_i} is not allowed to drive`)
+      }
+      i+=1
+  }
   </script>
 </body>
 </html>

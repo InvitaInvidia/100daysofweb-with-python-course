@@ -10,7 +10,17 @@
     called range to return that range of integers */
 
   function sum(numbers){
-    // you code
+      function range() {
+          return Array.from({length: 100}, (_, i) => i + 1);
+      }
+      if(numbers === undefined){
+          numbers = range()
+      }
+    const initialValue = 0;
+    return numbers.reduce(
+    (accumulator, currentValue) => accumulator + currentValue,
+    initialValue,
+    );
   }
 
 

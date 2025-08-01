@@ -12,7 +12,7 @@ new autoComplete({
     let matches = [];
     for(i=0; i<choices.length; i++){
       let kcal = foodDb[choices[i]];
-      if(kcal == 0){
+      if(kcal === 0){
         continue;
       }
 

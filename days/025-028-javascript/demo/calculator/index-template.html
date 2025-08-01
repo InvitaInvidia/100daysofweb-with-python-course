@@ -39,6 +39,26 @@
   <script type="text/javascript">
   function doCalculation(){
     // you code
+      let n1 = parseInt(document.getElementById("num1").value);
+      console.log(n1)
+      let n2 = parseInt(document.getElementById("num2").value);
+      console.log(n2)
+      let op = document.getElementById("operator").value;
+      console.log(op)
+      let calc_result = 0
+      console.log()
+      if(op === "+"){
+          calc_result = n1+n2
+          console.log(calc_result)
+      }else if(op === "-"){
+          calc_result = n1-n2
+      }else if(op === "*"){
+          calc_result=n1*n2
+      }else {
+          calc_result=n1/n2
+      }
+
+      document.getElementById("result").innerHTML = calc_result.toString()
   }
   </script>
 
